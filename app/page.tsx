@@ -1,6 +1,7 @@
 import localFont from "next/font/local"
 import ProjectRow from "./components/ProjectRow";
 import "bootstrap-icons/font/bootstrap-icons.css"
+// import { gsap } from "gsap/gsap-core";
 
 const YingHei = localFont({
   src: "MYingHeiPRC.woff2"
@@ -35,8 +36,59 @@ export default function Home(){
         <ProjectRow
           icon={<i className=""></i>}
           title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
           actionIcon={<i className="bi bi-arrow-up-right"></i>}
         />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          shortLine="TS STUFF CRAZY ASL BRO"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        
+        <div className="border-t-1 py-4 cusor-pointer"></div>
       </div>
     </div>
     </>
