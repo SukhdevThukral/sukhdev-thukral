@@ -16,7 +16,7 @@ export default function Home(){
     <>
     <div className="relative min-h-screen">
       <div className={`flex justify-between items-center absolute top-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
-        <div className=" flex gap-2">
+        <div className="flex gap-2">
           <h1 className="italic">INDEX,</h1>
           <h1> ABOUT</h1>
         </div>
@@ -87,9 +87,20 @@ export default function Home(){
           shortLine="TS STUFF CRAZY ASL BRO"
           actionIcon={<i className="bi bi-arrow-up-right"></i>}
         />
-        
+
         <div className="border-t-1 py-4 cusor-pointer"></div>
       </div>
+      <div className="py-[3rem] md:py-[4rem] lg:py-[6rem]">
+        <div className={`text-center font-bold ${nimbusSans.className}`}>
+          <div className="text-[1.97rem] sm:text-[1.95rem] md:text-[1.85rem] lg:text-[1.8rem]">
+            <h1 className="underline underline-offset-8">HIT ME UP</h1>
+          </div>
+          <div className="flex flex-col text-[1rem]">          
+            <span>OR FOLLOW ME ON </span> 
+            <span> <i className="bi bi-instagram"></i> INSTAGRAM </span>
+          </div>
+        </div>
+      </div>      
     </div>
     </>
   );
