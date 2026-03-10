@@ -1,4 +1,6 @@
 import localFont from "next/font/local"
+import ProjectRow from "./components/ProjectRow";
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const YingHei = localFont({
   src: "MYingHeiPRC.woff2"
@@ -28,6 +30,13 @@ export default function Home(){
           </div>
           <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#000000] font-bold ${nimbusSans.className}`}>I AM A HIGHSCHOOL SENIOR AND ALSO A SELF PROCLAIMED PRODUCT ENGINEER :3 LIVING IN INDIA. I LOVE MAKING THINGS (PRODUCTS).THE PROCESS OF TURNING AN IDEA FROM A COLLECTION OF THOUGHTS INTO SOMETHING THAT ACTUALLY EXISTS IS SUPER FUN. ITS WHAT I GET TO SPEND MY DAYS DOING AND I ABSOLUTELY LOVE IT</div>
         {/* </div> */}
+      </div>
+      <div className={`px-6 md:px-12 lg:px-20 ${nimbusSans.className}`}>  
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="CRAZY STUFF"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
       </div>
     </div>
     </>
