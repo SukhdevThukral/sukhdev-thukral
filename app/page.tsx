@@ -35,8 +35,8 @@ export default function Home(){
       <div className={`px-6 md:px-12 lg:px-20 ${nimbusSans.className}`}>  
         <ProjectRow
           icon={<i className=""></i>}
-          title="CRAZY STUFF"
-          shortLine="TS STUFF CRAZY ASL BRO"
+          title="COMMITCRAFT"
+          shortLine="CONVENTIONAL AI COMMIT GENERATOR"
           actionIcon={<i className="bi bi-arrow-up-right"></i>}
         />
         <ProjectRow
@@ -95,12 +95,19 @@ export default function Home(){
           <div className="text-[1.97rem] sm:text-[1.95rem] md:text-[1.85rem] lg:text-[1.8rem]">
             <h1 className="underline underline-offset-8">HIT ME UP</h1>
           </div>
-          <div className="flex flex-col text-[1rem]">          
+          <div className="flex flex-col text-[1.2rem]">          
             <span>OR FOLLOW ME ON </span> 
-            <span> <i className="bi bi-instagram"></i> INSTAGRAM </span>
+            <span> <i className="bi bi-instagram"></i>   INSTAGRAM </span>
           </div>
         </div>
-      </div>      
+      </div>  
+      <div className={`flex justify-between items-center absolute bottom-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
+        <div className="flex gap-2">
+          <h1 className="italic">INDEX,</h1>
+          <h1> ABOUT</h1>
+        </div>
+        <h1>© SUKHDEV THUKRAL</h1>
+      </div>    
     </div>
     </>
   );
