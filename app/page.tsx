@@ -41,8 +41,26 @@ export default function Home(){
         />
         <ProjectRow
           icon={<i className=""></i>}
-          title="CRAZY STUFF"
-          shortLine="TS STUFF CRAZY ASL BRO"
+          title="SONICMESH"
+          shortLine="ULTRASONIC COMMUNICATION ENABLING DATA TRANSFER OVER AUDIO."
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="QUANTUM ALGORITHMS SIMULATOR"
+          shortLine="EXPERIMENT TO SIMULATE QUANTUM ALGORITHMS IN PYTHON"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="THIS WEBSITE"
+          shortLine="TOOK DESIGN INSPO FROM DRIBBBLE <33"
+          actionIcon={<i className="bi bi-arrow-up-right"></i>}
+        />
+        <ProjectRow
+          icon={<i className=""></i>}
+          title="VOTEX"
+          shortLine="A SIMPLE AND PRACTICAL APPLICATION OF SHA-256 ENCRYPTION AND DECRYPTION "
           actionIcon={<i className="bi bi-arrow-up-right"></i>}
         />
         <ProjectRow
@@ -53,25 +71,7 @@ export default function Home(){
         />
         <ProjectRow
           icon={<i className=""></i>}
-          title="CRAZY STUFF"
-          shortLine="TS STUFF CRAZY ASL BRO"
-          actionIcon={<i className="bi bi-arrow-up-right"></i>}
-        />
-        <ProjectRow
-          icon={<i className=""></i>}
-          title="CRAZY STUFF"
-          shortLine="TS STUFF CRAZY ASL BRO"
-          actionIcon={<i className="bi bi-arrow-up-right"></i>}
-        />
-        <ProjectRow
-          icon={<i className=""></i>}
-          title="CRAZY STUFF"
-          shortLine="TS STUFF CRAZY ASL BRO"
-          actionIcon={<i className="bi bi-arrow-up-right"></i>}
-        />
-        <ProjectRow
-          icon={<i className=""></i>}
-          title="CRAZY STUFF"
+          title=""
           shortLine="TS STUFF CRAZY ASL BRO"
           actionIcon={<i className="bi bi-arrow-up-right"></i>}
         />
