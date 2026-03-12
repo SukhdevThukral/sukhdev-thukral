@@ -2,6 +2,7 @@ import localFont from "next/font/local"
 import ProjectRow from "./components/ProjectRow";
 import "bootstrap-icons/font/bootstrap-icons.css"
 import SmoothScroll from './components/ScrollSmoother';
+import CustomCursor from "./components/customCursor";
 
 const YingHei = localFont({
   src: "MYingHeiPRC.woff2"
@@ -14,6 +15,7 @@ const nimbusSans = localFont({
 export default function Home(){
   return(
     <>
+    <CustomCursor/>
     <SmoothScroll>
       <div className="relative min-h-screen">
         <div className={`flex justify-between items-center absolute top-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
@@ -63,31 +65,6 @@ export default function Home(){
               shortLine="A SIMPLE AND PRACTICAL APPLICATION OF SHA-256 ENCRYPTION AND DECRYPTION "
               actionIcon={<i className="bi bi-arrow-up-right"></i>}
             />
-            <ProjectRow
-              icon={<i className=""></i>}
-              title="CRAZY STUFF"
-              shortLine="TS STUFF CRAZY ASL BRO"
-              actionIcon={<i className="bi bi-arrow-up-right"></i>}
-            />
-            <ProjectRow
-              icon={<i className=""></i>}
-              title=""
-              shortLine="TS STUFF CRAZY ASL BRO"
-              actionIcon={<i className="bi bi-arrow-up-right"></i>}
-            />
-            <ProjectRow
-              icon={<i className=""></i>}
-              title="CRAZY STUFF"
-              shortLine="TS STUFF CRAZY ASL BRO"
-              actionIcon={<i className="bi bi-arrow-up-right"></i>}
-            />
-            <ProjectRow
-              icon={<i className=""></i>}
-              title="CRAZY STUFF"
-              shortLine="TS STUFF CRAZY ASL BRO"
-              actionIcon={<i className="bi bi-arrow-up-right"></i>}
-            />
-
             <div className="border-t-1 py-4 cusor-pointer"></div>
           </div>
           <div className="py-[3rem] md:py-[4rem] lg:py-[6rem]">
