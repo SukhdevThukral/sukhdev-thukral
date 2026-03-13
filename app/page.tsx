@@ -37,9 +37,14 @@ export default function Home(){
       <SmoothScroll>
         <div className="relative min-h-screen">
           <div className={`flex justify-between items-center absolute top-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
-            <div className="flex gap-2">
-              <h1 className="italic">INDEX,</h1>
-              <h1> ABOUT</h1>
+            <div className="flex gap-2 reveal-text">
+              <div className="overflow-hidden">
+                <h1 className="italic">INDEX,</h1>
+              </div>
+              <div className="overflow-hidden">
+                <h1> ABOUT</h1>
+              </div>
+
             </div>
             <h1 className="underline underline-offset-7">CONTACT</h1>
           </div>
