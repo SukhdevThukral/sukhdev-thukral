@@ -26,7 +26,7 @@ export default function HoverImage({imgSrc, active}: HoverImageProps){
 
         const moveImage = (e: MouseEvent)=> {
             xSet(e.clientX+20);
-            ySet(e.clientY-100);
+            ySet(e.clientY-80);
         };
 
         window.addEventListener("mousemove", moveImage);
@@ -35,15 +35,15 @@ export default function HoverImage({imgSrc, active}: HoverImageProps){
             gsap.to(container.current, {
                 scale: 1,
                 opacity: 1,
-                duration: 0.5,
-                ease: "power3.out"
+                duration: 0.3,
+                ease: "power2.out"
             });
         } else{
             gsap.to(container.current, {
                 scale: 0,
-                opacity: 0,
-                duration: 0.3,
-                ease: "power3.in"
+                opacity: 0.95,
+                duration: 0.2,
+                ease: "power2.in"
             });
         }
         return() => window.removeEventListener("mousemove", moveImage);
@@ -52,9 +52,9 @@ export default function HoverImage({imgSrc, active}: HoverImageProps){
     if(!mounted) return null;
     //"teleporting this div to the doc body"
     return createPortal(
-        <div ref={container} className="fixed top-0 left-0 w-80 h-52 pointer-events-none z-[10000] opacity-0 scale-0 overflow-hidden bg-[#EA3424] p-3 shadow-2xl"> 
-            <div className="relative w-full h-full overflow-hidden">
-                <img src={imgSrc} alt=" preview" className="w-full h-full object-cover"/>
+        <div ref={container} className="fixed top-0 left-0 w-[165px] h-[165px] pointer-events-none z-[10000] opacity-0 scale-95 overflow-hidden bg-[#EA3424] shadow-2xl"> 
+            <div className="w-[80%] h-[60%] bg-black">
+                <img src={imgSrc} alt="preview" className="w-full h-full object-contain"/>
             </div>
         </div>,
         document.body
