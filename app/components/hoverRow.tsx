@@ -25,7 +25,7 @@ export default function HoverImage({imgSrc, active}: HoverImageProps){
         const ySet = gsap.quickSetter(container.current, "y", "px");
 
         const moveImage = (e: MouseEvent)=> {
-            xSet(e.clientX+20);
+            xSet(e.clientX+40);
             ySet(e.clientY-80);
         };
 
