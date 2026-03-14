@@ -52,8 +52,8 @@ export default function HoverImage({imgSrc, active}: HoverImageProps){
     if(!mounted) return null;
     //"teleporting this div to the doc body"
     return createPortal(
-        <div ref={container} className="fixed top-0 left-0 w-[165px] h-[165px] pointer-events-none z-[10000] opacity-0 scale-95 overflow-hidden bg-[#EA3424] shadow-2xl"> 
-            <div className="w-[80%] h-[60%] bg-black">
+        <div ref={container} className="fixed top-0 left-0 w-[165px] h-[165px] pointer-events-none z-[10000] opacity-0 scale-95 overflow-hidden bg-[#EA3424] shadow-2xl flex items-center justify-center"> 
+            <div className="w-[100%] h-[60%] bg-black">
                 <img src={imgSrc} alt="preview" className="w-full h-full object-contain"/>
             </div>
         </div>,
