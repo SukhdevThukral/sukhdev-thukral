@@ -8,6 +8,7 @@ import SmoothScroll from './components/ScrollSmoother';
 import CustomCursor from "./components/customCursor";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import SplitType from 'split-type';
 
 const YingHei = localFont({
   src: "MYingHeiPRC.woff2"
@@ -19,15 +20,44 @@ const nimbusSans = localFont({
 
 export default function Home(){
   const container = useRef(null);
+  const descRef = useRef(null);
 
   useGSAP(() => {
-    gsap.from(".reveal-text span", {
-      y: "100%",
+    if (!descRef.current) return;
+
+    const splitText = new SplitType(descRef.current, {types:'lines'});
+
+    splitText.lines?.forEach(line=> {
+      const wrapper = document.createElement('div');
+      wrapper.style.overflow = 'hidden'
+      line.parentNode?.insertBefore(wrapper,line);
+      wrapper.appendChild(line);
+    });
+
+    const tl = gsap.timeline({delay:0.5});
+
+    tl.from(".nav-item", {
+      y:"105%",
+      duration:1,
+      ease:"power4.out",
+      stagger:0.1
+    })
+
+    .from(".name-reveal", {
+      y:"105%",
       duration: 1.6,
       ease: "power4.out",
-      stagger:0.1,
-      delay:0.5
-    });
+      stagger: 0.2
+    }, "-=0.6")
+
+    .from(splitText.lines, {
+      y:"100%",
+      duration: 1.2,
+      ease: "power4.out",
+      stagger: 0.08
+    }, "-=1");
+
+    return ()=> splitText.revert();
   }, {scope:container});
 
 
@@ -37,28 +67,38 @@ export default function Home(){
       <SmoothScroll>
         <div className="relative min-h-screen">
           <div className={`flex justify-between items-center absolute top-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
-            <div className="flex gap-2 reveal-text">
+            <div className="flex gap-2">
               <div className="overflow-hidden">
-                <h1 className="italic">INDEX,</h1>
+                <h1 className="nav-item inline-block italic">INDEX,</h1>
               </div>
               <div className="overflow-hidden">
-                <h1> ABOUT</h1>
+                <h1 className="nav-item inline-block"> ABOUT</h1>
               </div>
-
             </div>
-            <h1 className="underline underline-offset-7">CONTACT</h1>
+            <div className="overflow-hidden">
+              <h1 className="nav-item inline-block underline underline-offset-7">CONTACT</h1>
+            </div>
           </div>
-            <div className="flex flex-col justify-center items-center h-screen px-4">
+          <div className="flex flex-col justify-center items-center h-screen px-4">
               {/* <div className="flex flex-col items-center w-full max-w-[50vw]"> */}
                 <div className={`reveal-text flex flex-col text-center text-[18.4vw] sm:text-[18.6vw] md:text-[18.8vw] lg:text-[19vw] text-[#EA3424] font-bold leading-[0.9] tracking-tight ${YingHei.className}`}>
                   <div className="overflow-hidden">
-                    <span className="inline-block">SUKHDEV</span>
+                    <span className="name-reveal inline-block">SUKHDEV</span>
                   </div>
                   <div className="overflow-hidden">
-                    <span className="inline-block">THUKRAL</span>
+                    <span className="name-reveal inline-block">THUKRAL</span>
                   </div>
                 </div>
-                <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#000000] font-bold ${nimbusSans.className}`}>I AM A HIGHSCHOOL SENIOR AND ALSO A SELF PROCLAIMED PRODUCT ENGINEER :3 LIVING IN INDIA. I LOVE MAKING THINGS (PRODUCTS).THE PROCESS OF TURNING AN IDEA FROM A COLLECTION OF THOUGHTS INTO SOMETHING THAT ACTUALLY EXISTS IS SUPER FUN. ITS WHAT I GET TO SPEND MY DAYS DOING AND I ABSOLUTELY LOVE IT</div>
+                <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#000000] font-bold ${nimbusSans.className}`}>
+                  <div className="overflow-hidden">
+                    <p ref={descRef} className="desc-reveal inline-block">
+                    I AM A HIGHSCHOOL SENIOR AND ALSO A SELF PROCLAIMED PRODUCT ENGINEER :3 LIVING IN INDIA. 
+                    I LOVE MAKING THINGS (SOFTWARES).THE PROCESS OF TURNING AN IDEA FROM A COLLECTION OF 
+                    THOUGHTS INTO SOMETHING THAT ACTUALLY EXISTS IS SUPER FUN. ITS WHAT I GET TO SPEND MY 
+                    DAYS DOING AND I ABSOLUTELY LOVE IT
+                    </p>
+                  </div>
+                </div>
               {/* </div> */}
             </div>
             <div className={`px-6 md:px-12 lg:px-20 ${nimbusSans.className}`}>  
