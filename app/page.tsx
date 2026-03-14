@@ -134,7 +134,7 @@ export default function Home(){
                 title="COMMITCRAFT"
                 shortLine="CONVENTIONAL AI COMMIT GENERATOR"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
-                imgSrc="commitcraft.png"
+                imgSrc="/image.jpg"
               />
               <ProjectRow
                 icon={<i className=""></i>}
