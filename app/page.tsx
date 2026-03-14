@@ -1,6 +1,7 @@
 'use client'
 
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import localFont from "next/font/local"
 import ProjectRow from "./components/ProjectRow";
 import "bootstrap-icons/font/bootstrap-icons.css"
@@ -57,6 +58,32 @@ export default function Home(){
       stagger: 0.08
     }, "-=1");
 
+
+    const rows = gsap.utils.toArray(".project-row");
+    rows.forEach((row: any)=>{
+      const line = row.querySelector(".project-line");
+      const texts = row.querySelectorAll(".project-text-inner");
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: row,
+          start: "top 90%",
+          toggleActions: "play none none none"
+        }
+      })
+      .to(line,{
+        width: "100%",
+        duration: 1.4,
+        ease: "expo.inOut"
+      })
+      .from(texts, {
+        y: "105%",
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.1
+      }, "-=0.7");
+    });
+
     return ()=> splitText.revert();
   }, {scope:container});
 
@@ -89,7 +116,7 @@ export default function Home(){
                     <span className="name-reveal inline-block">THUKRAL</span>
                   </div>
                 </div>
-                <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#000000] font-bold ${nimbusSans.className}`}>
+                <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#111111] font-bold ${nimbusSans.className}`}>
                   <div className="overflow-hidden">
                     <p ref={descRef} className="desc-reveal inline-block">
                     I AM A HIGHSCHOOL SENIOR AND ALSO A SELF PROCLAIMED PRODUCT ENGINEER :3 LIVING IN INDIA. 
@@ -132,7 +159,9 @@ export default function Home(){
                 shortLine="A SIMPLE AND PRACTICAL APPLICATION OF SHA-256 ENCRYPTION AND DECRYPTION "
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
               />
-              <div className="border-t-1 py-4 cusor-pointer"></div>
+              <div className="project-row">
+                <div className="project-line border-t-1 border-black w-0 mx-auto"></div>
+              </div>
             </div>
             <div className="py-[3rem] md:py-[4rem] lg:py-[6rem]">
               <div className={`text-center font-bold ${nimbusSans.className}`}>
@@ -145,7 +174,6 @@ export default function Home(){
                 </div>
               </div>
             </div>  
-
           <div className={`flex justify-between items-center absolute bottom-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
             <div className="flex gap-2">
               <h1 className="italic">INDEX,</h1>
