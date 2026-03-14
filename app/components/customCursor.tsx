@@ -9,6 +9,7 @@ export default function CustomCursor(){
 
     useEffect(() => {
         const cursor = cursorRef.current;
+        if (!cursor) return;
 
         gsap.set(cursor, {xPercent: -50, yPercent: -50, scale: 0});
 
@@ -16,14 +17,28 @@ export default function CustomCursor(){
         const ySet = gsap.quickSetter(cursor, "y", "px");
 
         const moveCursor = (e:MouseEvent) => {
-            gsap.to(cursor, {scale:1, duration:0.3});
+
+            const currentScale = gsap.getProperty(cursor, "scale") as number;
+            if (currentScale < 0.1){
+                gsap.to(cursor, {scale:1, duration:0.5, ease: "expo.out", overwrite:"auto"});
+            }
             xSet(e.clientX);
             ySet(e.clientY);
         };
 
+        const handleMouseLeave = () => {
+            gsap.to(cursor, {scale:0, duration:0.3, ease: "power2.inOut"});
+        }
+
         window.addEventListener('mousemove', moveCursor);
+        window.addEventListener('mouseleave', handleMouseLeave);
+        document.documentElement.addEventListener('mouseleave', handleMouseLeave);
+
+
         return () => {
             window.removeEventListener('mousemove', moveCursor);
+            window.removeEventListener('mouseleave', handleMouseLeave);
+            document.documentElement.removeEventListener('mouseleave', handleMouseLeave);
         };
     }, []);
 
