@@ -19,35 +19,35 @@ const PROJECTS = [
         title: "Commit Craft",
         category: "tool",
         year: "©2025",
-        image: ""
+        image: "/commitcraft (1).png"
     },
     {
         id: "[02]",
         title: "Sonic Mesh",
         category: "tool",
         year: "©2025",
-        image: ""
+        image: "/sonicmesh (1).png"
     },
     {
         id: "[03]",
         title: "Votex",
         category: "tool",
         year: "©2025",
-        image: ""
+        image: "/votex (1).png"
     },
     {
         id: "[04]",
         title: "sukhdev-thukral",
         category: "web dev",
         year: "©2026",
-        image: ""
+        image: "/sukhdev-thukral(1).png"
     },
     {
         id: "[05]",
-        title: "Commit Craft",
+        title: "Thread Weaver",
         category: "cli tool",
         year: "©2025",
-        image: ""
+        image: "/ThreadWeaver (2).png"
     },
 
 ]
@@ -78,11 +78,11 @@ export default function projectPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-24">
                 {PROJECTS.map((project) => (
                     <div key={project.id} className="group cursor-pointer">
-                        <div className="relative aspect-[1.8/1] overflow-hidden bg-neutral-200">
+                        <div className="relative aspect-[1.8/1] overflow-hidden bg-neutral-200 rounded-lg">
                             <Image
                                 src={project.image}
                                 alt={project.title}
-                                fill className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                fill className="object-cover transition-transform duration-700 group-hover:scale-102"
                             />
                         </div>
                         <div className="mt-6 grid grid-cols-[1fr_2fr_1fr] items-start items-start border-t border-black/10 pt-4">
