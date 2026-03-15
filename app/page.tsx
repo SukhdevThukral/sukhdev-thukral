@@ -96,7 +96,7 @@ export default function Home(){
           <div className={`flex justify-between items-center absolute top-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
             <div className="flex gap-2">
               <div className="overflow-hidden">
-                <h1 className="nav-item inline-block italic">INDEX,</h1>
+                <h1 className="nav-item inline-block italic">HOME,</h1>
               </div>
               <div className="overflow-hidden">
                 <h1 className="nav-item inline-block"> ABOUT</h1>
@@ -130,32 +130,33 @@ export default function Home(){
             </div>
             <div className={`px-6 md:px-12 lg:px-20 ${nimbusSans.className}`}>  
               <ProjectRow
-                icon={<i className=""></i>}
+                icon={<i className="bi bi-git"></i>}
                 title="COMMITCRAFT"
                 shortLine="CONVENTIONAL AI COMMIT GENERATOR"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
                 imgSrc="https://cdn.hackclub.com/019ceffe-7e34-7cad-aa45-8a94fbc79299/image.png"
               />
               <ProjectRow
-                icon={<i className=""></i>}
+                icon={<i className="bi bi-volume-up"></i>}
                 title="SONICMESH"
                 shortLine="ULTRASONIC COMMUNICATION ENABLING DATA TRANSFER OVER AUDIO."
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
+                imgSrc="https://cdn.hackclub.com/019cf00b-f42c-7704-a861-74acd322e5c7/image.png"
               />
               <ProjectRow
-                icon={<i className=""></i>}
+                icon={<i className="bi bi-laptop"></i>}
                 title="QUANTUM ALGORITHMS SIMULATOR"
                 shortLine="EXPERIMENT TO SIMULATE QUANTUM ALGORITHMS IN PYTHON"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
               />
               <ProjectRow
-                icon={<i className=""></i>}
+                icon={<i className="bi bi-window-stack"></i>}
                 title="THIS WEBSITE"
                 shortLine="TOOK DESIGN INSPO FROM DRIBBBLE <33"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
               />
               <ProjectRow
-                icon={<i className=""></i>}
+                icon={<i className="bi bi-fingerprint"></i>}
                 title="VOTEX"
                 shortLine="A SIMPLE AND PRACTICAL APPLICATION OF SHA-256 ENCRYPTION AND DECRYPTION "
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
@@ -177,7 +178,7 @@ export default function Home(){
             </div>  
           <div className={`flex justify-between items-center absolute bottom-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
             <div className="flex gap-2">
-              <h1 className="italic">INDEX,</h1>
+              <h1 className="italic">HOME,</h1>
               <h1> ABOUT</h1>
             </div>
             <h1>© SUKHDEV THUKRAL</h1>

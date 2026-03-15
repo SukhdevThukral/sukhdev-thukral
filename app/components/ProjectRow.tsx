@@ -21,7 +21,7 @@ export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc}: Pr
 
       {imgSrc && <HoverImage imgSrc={imgSrc} active={isHovered}/>}
 
-      <div className="grid grid-cols-[auto_0.75fr_1fr_auto] items-center gap-3 text-[20px] font-bold py-4">
+      <div className="grid grid-cols-[auto_0.75fr_1fr_auto] items-center gap-3 text-[20px] font-bold">
         <div className="w-5 flex justify-center overflow-hidden">
           <div className="project-text-inner inline-block">{icon}</div>
         </div>
