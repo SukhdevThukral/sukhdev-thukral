@@ -69,6 +69,9 @@ export default function Home(){
           trigger: row,
           start: "top 90%",
           toggleActions: "play none none none"
+        },
+        onComplete: () => {
+          row.style.pointerEvents = "auto";
         }
       })
       .to(line,{
@@ -83,7 +86,18 @@ export default function Home(){
         stagger: 0.1
       }, "-=0.7");
     });
-
+    gsap.from(".footer-item", {
+      scrollTrigger: {
+        trigger: ".footer-item",
+        start: "top bottom",
+        toggleActions: "play none none reverse"
+      },
+      y: "105%",
+      duration: 1,
+      ease: "power4.out",
+      stagger:0.1
+    });
+    
     return ()=> splitText.revert();
   }, {scope:container});
 
@@ -119,7 +133,7 @@ export default function Home(){
                 <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#111111] font-bold ${nimbusSans.className}`}>
                   <div className="overflow-hidden">
                     <p ref={descRef} className="desc-reveal inline-block">
-                    I AM A HIGHSCHOOL SENIOR AND ALSO A SELF PROCLAIMED PRODUCT ENGINEER :3 LIVING IN INDIA. 
+                    I AM A HIGHSCHOOL SENIOR AND ALSO A SELF PROCLAIMED PRODUCT ENGINEER LIVING IN INDIA. 
                     I LOVE MAKING THINGS (SOFTWARES).THE PROCESS OF TURNING AN IDEA FROM A COLLECTION OF 
                     THOUGHTS INTO SOMETHING THAT ACTUALLY EXISTS IS SUPER FUN. ITS WHAT I GET TO SPEND MY 
                     DAYS DOING AND I ABSOLUTELY LOVE IT
@@ -178,10 +192,16 @@ export default function Home(){
             </div>  
           <div className={`flex justify-between items-center absolute bottom-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
             <div className="flex gap-2">
-              <h1 className="italic">HOME,</h1>
-              <h1> ABOUT</h1>
+              <div className="overflow-hidden">
+                <h1 className="footer-item inline-block italic">HOME,</h1>
+              </div>
+              <div className="overflow-hidden">
+                <h1 className="footer-item inline-block">ABOUT</h1>
+              </div>
             </div>
-            <h1>© SUKHDEV THUKRAL</h1>
+            <div className="overflow-hidden">
+              <h1 className="footer-item inline-block">© SUKHDEV THUKRAL</h1>
+            </div>
           </div>    
         </div>
       </SmoothScroll>

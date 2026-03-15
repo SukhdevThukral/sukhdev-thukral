@@ -13,7 +13,7 @@ export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc}: Pr
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="project-row cursor-pointer group w-full relative"
+    <div className="project-row cursor-pointer group w-full relative pointer-events-none"
     onMouseEnter={()=> setIsHovered(true)}
     onMouseLeave={()=> setIsHovered(false)}>
 
@@ -31,7 +31,7 @@ export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc}: Pr
         <div className="overflow-hidden">
           <div className="project-text-inner inline-block">{shortLine}</div>
         </div>
-        <div className="">
+        <div className="overflow-hidden">
           <div className="project-text-inner inline-block">{actionIcon}</div>
         </div>
       </div>
