@@ -21,14 +21,14 @@ export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc}: Pr
 
       {imgSrc && <HoverImage imgSrc={imgSrc} active={isHovered}/>}
 
-      <div className="grid grid-cols-[auto_0.75fr_1fr_auto] items-center gap-3 text-[20px] font-bold">
+      <div className="grid grid-cols-[auto_1fr_auto] sm:grid-cols-[auto_0.75fr_1fr_auto] items-center gap-3 text-[16px] sm:text-[20px] font-bold">
         <div className="w-5 flex justify-center overflow-hidden">
           <div className="project-text-inner inline-block">{icon}</div>
         </div>
         <div className="overflow-hidden">
-          <div className="project-text-inner inline-block">{title}</div>
+          <div className="project-text-inner inline-block truncate">{title}</div>
         </div>
-        <div className="overflow-hidden">
+        <div className="hidden sm:block overflow-hidden">
           <div className="project-text-inner inline-block">{shortLine}</div>
         </div>
         <div className="overflow-hidden">
