@@ -134,7 +134,7 @@ export default function Home(){
                 title="COMMITCRAFT"
                 shortLine="CONVENTIONAL AI COMMIT GENERATOR"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
-                imgSrc="/image.jpg"
+                imgSrc="https://cdn.hackclub.com/019ceffe-7e34-7cad-aa45-8a94fbc79299/image.png"
               />
               <ProjectRow
                 icon={<i className=""></i>}
