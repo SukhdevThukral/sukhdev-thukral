@@ -10,6 +10,7 @@ import CustomCursor from "./components/customCursor";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import SplitType from 'split-type';
+import Link from "next/link";
 
 const YingHei = localFont({
   src: "MYingHeiPRC.woff2"
@@ -113,7 +114,9 @@ export default function Home(){
                 <h1 className="nav-item inline-block italic">HOME,</h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="nav-item inline-block"> ABOUT</h1>
+                <Link href="/projects">
+                  <h1 className="nav-item inline-block"> ABOUT</h1>
+                </Link>
               </div>
             </div>
             <div className="overflow-hidden">
