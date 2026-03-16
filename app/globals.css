@@ -18,8 +18,16 @@ html, body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   cursor: none !important;
+  height: auto;
+  overflow: hidden;
+  overflow-x: hidden;
+  scroll-behavior: auto !important;
 }
 
 a, button, .cursor-pointer, input, textarea{
   cursor: none !important;
+}
+
+main {
+  -webkit-overflow-scrolling: auto;
 }

@@ -73,7 +73,7 @@ export default function projectPage() {
                 </h1>
                 <div className="max-w-[280px] mt-8 lg:mt-auto">
                     <p className="text-sm leading-relaxed text-gray-600/70 font-medium">
-                        This aim to give a glimpse to the stuff like programming, robotics and etc ive done throughout my life iguess?
+                        This aims to give a glimpse to the stuff like programming, robotics and etc ive done throughout my life iguess?
                     </p>
                 </div>
             </header>
@@ -85,6 +85,8 @@ export default function projectPage() {
                                 src={project.image}
                                 alt={project.title}
                                 fill className="object-cover"
+                                priority={project.id === "[01]" || project.id === "[02]"}
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 style={{backfaceVisibility:'hidden', transformStyle:'preserve-3d'}}
                             />
                         </div>
