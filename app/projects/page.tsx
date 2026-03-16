@@ -57,7 +57,13 @@ const PROJECTS = [
         year: "©2024",
         image: "/cheatcode(2).png"
     },
-
+    {
+        id: "[07]",
+        title: "Crypto Flair",
+        category: "my own nft :D",
+        year: "©2024",
+        image: "/nft(1).png"
+    },
 ]
 
 export default function projectPage() {
