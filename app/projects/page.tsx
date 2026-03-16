@@ -61,8 +61,15 @@ const PROJECTS = [
         id: "[07]",
         title: "Crypto Flair",
         category: "my own nft :D",
-        year: "©2024",
+        year: "©2022",
         image: "/nft(1).png"
+    },
+    {
+        id: "[08]",
+        title: "Spikeyy",
+        category: "valorant discord bot",
+        year: "©2020",
+        image: "/spikey.png"
     },
 ]
 
