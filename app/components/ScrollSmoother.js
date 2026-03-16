@@ -11,25 +11,28 @@ if (typeof window !== 'undefined'){
 }
 
 export default function SmoothScroll({children}){
-    const container = useRef();
+    const wrapperRef = useRef(null);
+    const contentRef = useRef(null);
 
     useGSAP(() => {
         const smoother = ScrollSmoother.create({
-            wrapper: '#smooth-wrapper',
-            content: '#smooth-content',
-            smooth: 1.5,
+            wrapper: wrapperRef.current,
+            content: contentRef.current,
+            smooth: 2,
             effects: true,
+            normalizeScroll: true,
+            ignoreMobileResize: true,
         });
 
         return() => {
             smoother.kill()
         };
 
-    }, {scope:container});
+    }, {scope:wrapperRef});
 
     return (
-        <div id="smooth-wrapper" ref={container}>
-            <div id="smooth-content">
+        <div id="smooth-wrapper" ref={wrapperRef} style={{overflow:'hidden'}}>
+            <div id="smooth-content" ref={contentRef}>
                 {children}
             </div>
         </div>

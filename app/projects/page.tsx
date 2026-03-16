@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import CustomCursor from "../components/customCursor";
 import "bootstrap-icons/font/bootstrap-icons.css"
+import SmoothScroll from '../components/ScrollSmoother';
 import localFont from "next/font/local";
 
 const articulat = localFont({
@@ -56,6 +57,7 @@ export default function projectPage() {
     return(
         <div>
         <CustomCursor/>
+        <SmoothScroll>
         <main className="min-h-screen bg-[#F6F4F2] text-black px-6 md:px-16 md:py-20 font-sans">
             <div className="flex items-center gap-2 mb-5">
                 
@@ -67,7 +69,7 @@ export default function projectPage() {
 
             <header className="flex flex-col lg:flex-row justify-between items-start mb-5 border-b border-black/5 pb-16">
                 <h1 className={`text-[15vw] md:text-[6vw] leading-[0.8] tracking-tighter ${articulat.className}`}>
-                    XPerience.
+                    ProjeX.
                 </h1>
                 <div className="max-w-[280px] mt-8 lg:mt-auto">
                     <p className="text-sm leading-relaxed text-gray-600/70 font-medium">
@@ -82,7 +84,8 @@ export default function projectPage() {
                             <Image
                                 src={project.image}
                                 alt={project.title}
-                                fill className="object-cover transition-transform duration-700 group-hover:scale-102"
+                                fill className="object-cover"
+                                style={{backfaceVisibility:'hidden', transformStyle:'preserve-3d'}}
                             />
                         </div>
                         <div className="mt-6 grid grid-cols-[1fr_2fr_1fr] items-start items-start border-t border-black/10 pt-4">
@@ -105,6 +108,7 @@ export default function projectPage() {
                 ))}
             </div>
         </main>
+        </SmoothScroll>
         </div>
     );
 }
