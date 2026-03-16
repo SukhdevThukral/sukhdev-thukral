@@ -50,6 +50,13 @@ const PROJECTS = [
         year: "©2025",
         image: "/ThreadWeaver (2).png"
     },
+    {
+        id: "[06]",
+        title: "CHEAT CODE",
+        category: "cli tool",
+        year: "©2024",
+        image: "/cheatcode(2).png"
+    },
 
 ]
 
@@ -90,11 +97,11 @@ export default function projectPage() {
                                 style={{backfaceVisibility:'hidden', transformStyle:'preserve-3d'}}
                             />
                         </div>
-                        <div className="mt-6 grid grid-cols-[1fr_2fr_1fr] items-start items-start border-t border-black/10 pt-4">
+                        <div className="mt-6 grid grid-cols-[1fr_auto_1fr] items-start items-start border-t border-black/10 pt-4">
                             <span className={`"text-[11px] font-black tracking-tighter" ${articulat.className}`}>
                                 {project.id}
                             </span>
-                            <div className="text-center">
+                            <div className="flex flex-col text-left">
                                 <h3 className={`"text-sm font-bold leading-none mb-1 tracking-tighter" ${articulat.className}`}>
                                     {project.title}
                                 </h3>
