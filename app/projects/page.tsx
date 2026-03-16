@@ -74,19 +74,19 @@ export default function projectPage() {
         <main className="min-h-screen bg-[#F6F4F2] text-black px-6 md:px-16 md:py-20 font-sans">
             <div className="flex items-center gap-2 mb-5">
                 
-                    <i className="bi bi-stars"></i>
+                <i className="bi bi-stars"></i>
                 <span className={`text-[15px] font-bold tracking-[0.2em] uppercase ${poppinssemibold.className}`}>
                     16 — 2026©
                 </span>
             </div>
 
             <header className="flex flex-col lg:flex-row justify-between items-start mb-5 border-b border-black/5 pb-16">
-                <h1 className={`text-[15vw] md:text-[6vw] leading-[0.8] tracking-tighter ${articulat.className}`}>
+                <h1 className={`text-[15vw] md:text-[10vw] leading-[0.8] tracking-tighter ${articulat.className}`}>
                     ProjeX.
                 </h1>
                 <div className="max-w-[280px] mt-8 lg:mt-auto">
                     <p className="text-sm leading-relaxed text-gray-600/70 font-medium">
-                        This aims to give a glimpse to the stuff like programming, robotics and etc ive done throughout my life iguess?
+                        This aims to give a glimpse to my projects in various fields such as programming, robotics and etc ive done throughout my life iguess?
                     </p>
                 </div>
             </header>
