@@ -158,7 +158,7 @@ export default function ContactPage(){
                 </div>
             </div>
 
-            <div className="border-reveal grid grid-cols-1 md:grid-cols-3 items-end text-[16px] tracking-[0.3em] pt-8">
+            <div className="border-reveal grid grid-cols-1 md:grid-cols-3 items-end text-[10px] tracking-[0.3em] pt-8">
                 <p className={`${degularMedium.className}`}>Based in India.</p>
                 <div className={`flex justify-center flex-col items-center ${degularMedium.className}`}>
                     <div className="h-12 w-[1px] bg-white/30 mb-4 border-reveal"></div>
