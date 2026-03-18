@@ -11,6 +11,13 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import SplitType from 'split-type';
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Draggable } from "gsap/dist/Draggable";
+
+
+if (typeof window !== "undefined"){
+  gsap.registerPlugin(Draggable);
+}
 
 const YingHei = localFont({
   src: "MYingHeiPRC.woff2"
@@ -23,6 +30,8 @@ const nimbusSans = localFont({
 export default function Home(){
   const container = useRef(null);
   const descRef = useRef(null);
+  const pullTarget = useRef(null);
+  const router = useRouter();
 
   useGSAP(() => {
     if (!descRef.current) return;
@@ -98,6 +107,36 @@ export default function Home(){
       ease: "power4.out",
       stagger:0.1
     });
+
+    Draggable.create(pullTarget.current, {
+      type: "x",
+      bounds: {minX:-200, maxX:0},
+      edgeResistance: 0.65,
+      onDrag: function(){
+        const progress = Math.abs(this.x) / 200;
+
+        gsap.set(this.target, {scaleX:1 + (progress*0.4), opacity: 1 - (progress*0.5)});
+
+        gsap.set(".reveal-text, .desc-reveal", {
+          filter: `blur(${progress * 15}px)`,
+          opacity: 1- progress,
+          scale: 1- (progress*0.05)
+        });
+
+        gsap.set(container.current, {backgroundColor: `rgba(234, 52, 36, ${progress * 0.15})`});
+      },
+      onDragEnd: function() {
+        if (this.x <= -180){
+          gsap.to(container.current, { backgroundColor: "#EA3424", duration: 0.5 });
+          gsap.to(this.target, {x: -window.innerWidth, duration: 0.7, ease: "expo.in"});
+          setTimeout(() => router.push('/contact'), 500);
+        } else{
+          gsap.to(this.target, {x:0, scaleX: 1, opacity: 1, duration: 0.6, ease: "elastic.out(1,0.5)"});
+          gsap.to(".reveal-text, .desc-reveal", {filter: "blur(0px)", opacity:1, scale:1, duration:0.4});
+          gsap.to(container.current, {backgroundColor: "transparent", duration: 0.4});
+        }
+      }
+    });
     
     return ()=> splitText.revert();
   }, {scope:container});
@@ -119,10 +158,13 @@ export default function Home(){
                 </Link>
               </div>
             </div>
-            <div className="overflow-hidden">
-              <Link href="/contact">
-                <h1 className="nav-item inline-block underline underline-offset-7">CONTACT</h1>
-              </Link>
+            <div className="flex items-center gap-4 group">
+              <span className="text-[15px] tracking-widest opacity-0 group-hover:opacity-40 transition-opacity duration-500 uppercase"> <i className="bi bi-arrow-bar-left"></i>Pull to Open</span>
+              <div className="overflow-visible">
+                <div ref={pullTarget} className="nav-item inline-block cursor-grab active:cursor-grabbing select-none">
+                  <h1 className="underline underline-offset-7">CONTACT</h1>
+                </div>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center h-screen px-4">
