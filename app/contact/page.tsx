@@ -21,7 +21,7 @@ const degularMedium = localFont({
 
 export default function ContactPage(){
     const container = useRef(null);
-    const marqueeRef = useRef(null);
+    const marqueeTween = useRef<gsap.core.Tween | null>(null);
 
 
     useGSAP (() => {
@@ -30,19 +30,19 @@ export default function ContactPage(){
         tl.from(".line-reveal", {
             y: "120%",
             duration: 1,
-            stagger: 0.8
+            stagger: 0.1
         })
         .from(".contact-item", {
             opacity:0,
             y:-20,
             duration:1,
             stagger: 0.1
-        }, "-=1")
+        }, "-=0.8")
 
-        gsap.to(".marquee-inner", {
+        marqueeTween.current = gsap.to(".marquee-inner", {
             xPercent: -50,
             repeat: -1,
-            duration: 10,
+            duration: 12,
             ease: "none",
         });
 
@@ -131,33 +131,41 @@ export default function ContactPage(){
                             <a href="mailto:sukhdevthukral2411@gmail.com" className="block hover:italic transition-all duration-300">
                                 sukhdevthukral2411@gmail.com
                             </a>
+                            <div className="h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></div>
                         </div>
                         <div className="contact-item">
                             <p className="opacity-90">+91 92138 41578</p>
                         </div>
                         <div className="contact-item opacity-80 flex gap-6 text-sm uppercase tracking-widest pt-4">
-                            <a href="https://github.com/SukhdevThukral" className="block hover:opacity-50 transition-opacity">Github</a>
-                            <a href="https://www.linkedin.com/in/sukhdevthukral/" className="block hover:opacity-50 transition-opacity">LinkedIn</a>
+                            <a href="https://github.com/SukhdevThukral" className="block hover:line-through transition-all">Github</a>
+                            <a href="https://www.linkedin.com/in/sukhdevthukral/" className="block hover:line-through transition-all">LinkedIn</a>
                         </div>
                     </div>
                 </div>
             </div>  
-            <div className="flex items-center gap-4 py-8 overflow-hidden footer-big-text">
-                <i className="bi bi-stars text-[10vw]"></i>
-                <span className={`text-[15vw] leading-none whitespace-nowrap ${degularMedium.className}`}>
-                    Think. Build.
-                </span>
+            <div className="relative py-12 -mx-12 border-y border-white/10 overflow-hidden cursor-crosshair"
+            onMouseEnter={() => marqueeTween.current?.pause()}
+            onMouseLeave={() => marqueeTween.current?.play()}>
+                <div className="marquee-inner">
+                    {[1,2,3,4].map((i) => (
+                        <div key={i} className="flex items-center">
+                            <span className={`text-[8vw] leading-none px-8 ${degularMedium.className}`}>
+                                Think. Create. Ship.
+                            </span>    
+                            <i className="bi bi-stars text-[4vw] opacity-50"></i>                                 
+                        </div>
+                    ))}          
+                </div>
             </div>
 
-            <div className="border-reveal grid gird-cols-1 md:grid-cols-3 items-center text-md tracking-widest pt-8 border-t border-white/20">
-                <p className={`text-center md:text-left ${degularMedium.className}`}>©2026 SUKHDEV THUKRAL.</p>
-                <div className={`flex justify-center ${degularMedium.className}`}>
-                    <a href="https://github.com/SukhdevThukral" className="hover:opacity-60 transition-opacity">
-                        GITHUB
-                    </a>
+            <div className="border-reveal grid grid-cols-1 md:grid-cols-3 items-end text-[16px] tracking-[0.3em] pt-8">
+                <p className={`${degularMedium.className}`}>Based in India.</p>
+                <div className={`flex justify-center flex-col items-center ${degularMedium.className}`}>
+                    <div className="h-12 w-[1px] bg-white/30 mb-4 border-reveal"></div>
+                    <p className={degularMedium.className}>©2026 Sukhdev Thukral</p>
                 </div>
-                <div className={`flex justify-center md:justify-end gap-8 mt-4 md:mt-0  ${degularMedium.className}`}>
-                    <a href="https://www.linkedin.com/in/sukhdevthukral/" className="hover:opacity-60 transition-opacity">LINKEDIN</a>
+                <div className={`flex justify-end gap-8 ${degularMedium.className}`}>
+                    <p className={degularMedium.className}>Scroll to top ↑</p>
                 </div>
             </div>
         </div>
