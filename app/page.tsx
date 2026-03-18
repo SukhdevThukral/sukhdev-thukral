@@ -120,7 +120,9 @@ export default function Home(){
               </div>
             </div>
             <div className="overflow-hidden">
-              <h1 className="nav-item inline-block underline underline-offset-7">CONTACT</h1>
+              <Link href="/contact">
+                <h1 className="nav-item inline-block underline underline-offset-7">CONTACT</h1>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center h-screen px-4">
