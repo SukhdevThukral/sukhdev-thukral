@@ -18,8 +18,6 @@ const degularMedium = localFont({
 })
 
 export default function ContactPage(){
-    const quicLinks = ['BIO', 'WORK', 'PROJECTS'];
-
     return(
         <div className="min-h-screen bg-[#EA3424] text-white flex flex-col justify-between p-8 md:p-12 selection:bg-white selection:text-[#EA3424]">
             <style jsx global>{`
@@ -48,15 +46,15 @@ export default function ContactPage(){
                     </h1>
                 </div>
                 <div className="md:col-span-3 space-y-4">
-                    <p className="text-xl opacity-90">/Contact</p>
-                    <div className="space-y-4 text-sm font-medium">
+                    <p className="text-2xl opacity-90 font-bold tracking-tighter">/ CONTACT</p>
+                    <div className="space-y-4 text-md font-medium">
                         <a href="mailto:sukhdevthukral2411@gmail.com" className="block hover:underline">
                             sukhdevthukral2411@gmail.com
                         </a>
                         <p>+91 92138 41578</p>
                         <address className="not-italic opacity-80 leading-tight">
                             github :3
-                            sukhdev thukral :3
+                            linkedin :3
                         </address>
                     </div>
                 </div>
@@ -68,14 +66,14 @@ export default function ContactPage(){
                 </span>
             </div>
             <div className="grid gird-cols-1 md:grid-cols-3 items-center text-md tracking-widest pt-8 border-t border-white/20">
-                <p className="text-center md:text-left">©2026 Sukhdev Thukral.</p>
+                <p className={`text-center md:text-left ${degularMedium.className}`}>©2026 SUKHDEV THUKRAL.</p>
                 <div className={`flex justify-center ${degularMedium.className}`}>
-                    <a href="#" className="hover:opacity-60 transition-opacity">
-                        Terms and Conditions
+                    <a href="https://github.com/SukhdevThukral" className="hover:opacity-60 transition-opacity">
+                        GITHUB
                     </a>
                 </div>
                 <div className={`flex justify-center md:justify-end gap-8 mt-4 md:mt-0  ${degularMedium.className}`}>
-                    <a href="#" className="hover:opacity-60 transition-opacity">Privacy Policy</a>
+                    <a href="https://www.linkedin.com/in/sukhdevthukral/" className="hover:opacity-60 transition-opacity">LINKEDIN</a>
                 </div>
             </div>
         </div>
