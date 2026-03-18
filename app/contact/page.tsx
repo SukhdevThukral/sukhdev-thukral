@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import {CircleDot} from 'lucide-react';
+import "bootstrap-icons/font/bootstrap-icons.css"
 import localFont from "next/font/local";
 
 const tharoBold = localFont({
@@ -10,6 +10,10 @@ const tharoBold = localFont({
 
 const degularBoldItalic = localFont({
     src: "/tharo/degularBoldItalic.otf"
+})
+
+const degularMedium = localFont({
+    src: "/tharo/degularMedium.otf"
 })
 
 export default function ContactPage(){
@@ -61,12 +65,12 @@ export default function ContactPage(){
                 </div>
             </div>
             <div className="flex items-center gap-4 py-8 overflow-hidden">
-                <CircleDot size={120} strokeWidth={2.5} className="min-w-fit"/>
-                <span className="text-[15vw] font-bold leading-none tracking-[-0.05em]">
+                <i className="bi bi-stars text-[10vw]"></i>
+                <span className={`text-[15vw] leading-none  ${degularMedium.className}`}>
                     Creative is
                 </span>
             </div>
-            <div className="flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-widest pt-8 border-t border-white/20">
+            <div className="flex flex-col md:flex-row justify-between items-center text-xs tracking-widest pt-8 border-t border-white/20">
                 <p>©2026 Creative Studio.</p>
                 <div className="flex gap-8 mt-4 md:mt-0">
                     <a href="#" className="hover:opacity-60 transition-opacity">Terms and Conditions</a>
