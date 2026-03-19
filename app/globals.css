@@ -31,3 +31,8 @@ a, button, .cursor-pointer, input, textarea{
 main {
   -webkit-overflow-scrolling: auto;
 }
+
+#contact-curtain{
+  will-change: transform;
+  box-shadow: -50px 0 100px rgba(0,0,0,0.2);
+}
