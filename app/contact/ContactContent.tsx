@@ -1,0 +1,192 @@
+"use client"
+
+import React, {useRef} from "react"
+import "bootstrap-icons/font/bootstrap-icons.css"
+import localFont from "next/font/local";
+import CustomCursor from "../components/customCursor";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useSearchParams } from "next/navigation";
+
+const tharoBold = localFont({
+    src: "/tharo/tharobold.otf"    
+})
+
+const degularBoldItalic = localFont({
+    src: "/tharo/degularBoldItalic.otf"
+})
+
+const degularMedium = localFont({
+    src: "/tharo/degularMedium.otf"
+})
+
+export default function ContactPage(){
+    const container = useRef(null);
+    const marqueeTween = useRef<gsap.core.Tween | null>(null);
+    const searchParams = useSearchParams();
+    const isPulled = searchParams.get('transition') === 'pulled';
+
+
+    useGSAP (() => {
+
+        if (isPulled){
+            gsap.fromTo(".contact-content", 
+                {filter: "blur(40px)", opacity:0, scale:1.1},
+                {
+                    filter: "blur(0px)", 
+                    opacity:1, 
+                    scale: 1,
+                    duration:1.8, 
+                    ease:"power2.out",
+                    delay:0.2
+                });
+        }
+
+        const tl = gsap.timeline({defaults: {ease: "expo.out"}});
+
+        tl.from(".line-reveal", {
+            y: "120%",
+            duration: 1.2,
+            stagger: 0.1,
+            delay: isPulled?0.4 :0
+        })
+        .from(".contact-item", {
+            opacity:0,
+            y:-20,
+            duration:1,
+            stagger: 0.1
+        }, "-=0.8")
+
+        marqueeTween.current = gsap.to(".marquee-inner", {
+            xPercent: -50,
+            repeat: -1,
+            duration: 12,
+            ease: "none",
+        });
+
+        const handleMouseMove = (e: MouseEvent) => {
+            const { clientX, clientY} = e;
+            const xPos = (clientX/window.innerWidth - 0.5) * 20;
+            const yPos = (clientY/window.innerHeight - 0.5) * 20;
+
+
+            gsap.to(".parallax-text", {
+                x: xPos,
+                y: yPos,
+                duration:1,
+                rotationX: -yPos * 0.5,
+                rotationY: xPos * 0.5,
+                ease: "power2.out",
+                stagger:0.05
+            });
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove)
+
+    }, {scope:container});
+    return(
+        <div ref={container} className="min-h-screen bg-[#EA3424] text-white overflow-hidden">
+            <style jsx global>{`
+                div.fixed.z-\[9999\] {
+                    background-color:white !important;
+                }
+                .mask {
+                    overflow:hidden
+                    padding: 0.5rem 1rem; 
+                    margin: -0.5rem -1rem;
+                    display: block;
+                }
+
+                .line-reveal{
+                    display: block;
+                    line-height: 1; 
+                    padding-left: 0.05em;
+                    will-change: transform;
+                }
+                
+                .systems-line{
+                    margin-top: -0.8rem;
+                }
+
+                .marquee-inner{
+                    display: flex;
+                    white-space: nowrap;
+                    width: fit-content;
+                }
+            `}</style>
+            <div className="contact-content flex flex-col justify-between min-h-screen p-8 md:p-12 selection:bg-white selection:text-[#EA3424]">
+                <CustomCursor/>
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mt-12 items-start relative z-10">
+                    <div className="md:col-span-7">
+                        <h1 className={`text-6xl md:text-8xl tracking-tighter pointer-events-none`}>
+                            <div className="mask">
+                                <span className={`${tharoBold.className} line-reveal parallax-text block`}>
+                                    Building
+                                </span>
+                            </div>
+
+                            <div className="mask systems-line">
+                                <span className={`${degularBoldItalic.className} line-reveal parallax-text block ml-[5%]`}>
+                                    Systems
+                                </span>
+                            </div>
+
+                            <div className="mask">
+                                <span className={`${tharoBold.className} line-reveal parallax-text block`}>
+                                    that Adapt.
+                                </span>
+                            </div>
+                        </h1>
+                    </div>
+
+                    <div className="md:col-span-3 space-y-4">
+                        <div className="contact-item">
+                            <p className="text-2xl opacity-90 font-bold tracking-tighter">/ CONTACT</p>
+                        </div>
+                        <div className="space-y-6 text-2xl font-medium tracking-tight">
+                            <div className="contact-item group">
+                                <a href="mailto:sukhdevthukral2411@gmail.com" className="block hover:italic transition-all duration-300">
+                                    sukhdevthukral2411@gmail.com
+                                </a>
+                                <div className="h-[2px] w-0 bg-white transition-all duration-500 group-hover:w-full"></div>
+                            </div>
+                            <div className="contact-item">
+                                <p className="opacity-90">+91 92138 41578</p>
+                            </div>
+                            <div className="contact-item opacity-80 flex gap-6 text-sm uppercase tracking-widest pt-4">
+                                <a href="https://github.com/SukhdevThukral" className="block hover:line-through transition-all">Github</a>
+                                <a href="https://www.linkedin.com/in/sukhdevthukral/" className="block hover:line-through transition-all">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div className="relative py-12 -mx-12 border-y border-white/10 overflow-hidden cursor-crosshair"
+                onMouseEnter={() => marqueeTween.current?.pause()}
+                onMouseLeave={() => marqueeTween.current?.play()}>
+                    <div className="marquee-inner">
+                        {[1,2,3,4].map((i) => (
+                            <div key={i} className="flex items-center">
+                                <span className={`text-[8vw] leading-none px-8 ${degularMedium.className}`}>
+                                    Think. Create. Ship.
+                                </span>    
+                                <i className="bi bi-stars text-[4vw] opacity-50"></i>                                 
+                            </div>
+                        ))}          
+                    </div>
+                </div>
+
+                <div className="border-reveal grid grid-cols-1 md:grid-cols-3 items-end text-[10px] tracking-[0.3em] pt-8">
+                    <p className={`${degularMedium.className}`}>Based in India.</p>
+                    <div className={`flex justify-center flex-col items-center ${degularMedium.className}`}>
+                        <div className="h-12 w-[1px] bg-white/30 mb-4 border-reveal"></div>
+                        <p className={degularMedium.className}>©2026 Sukhdev Thukral</p>
+                    </div>
+                    <div className={`flex justify-end gap-8 ${degularMedium.className}`}>
+                        <p className={degularMedium.className}>Scroll to top ↑</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
