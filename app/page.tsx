@@ -238,15 +238,16 @@ export default function Home(){
                 imgSrc="https://cdn.hackclub.com/019cf00b-f42c-7704-a861-74acd322e5c7/image.png"
               />
               <ProjectRow
-                icon={<i className="bi bi-laptop"></i>}
-                title="QUANTUM ALGORITHMS SIMULATOR"
-                shortLine="EXPERIMENT TO SIMULATE QUANTUM ALGORITHMS IN PYTHON"
-                actionIcon={<i className="bi bi-arrow-up-right"></i>}
-              />
-              <ProjectRow
                 icon={<i className="bi bi-window-stack"></i>}
                 title="THIS WEBSITE"
                 shortLine="TOOK DESIGN INSPO FROM DRIBBBLE <33"
+                actionIcon={<i className="bi bi-arrow-up-right"></i>}
+                imgSrc="https://cdn.hackclub.com/019d0413-cb2b-720d-8673-7b4b23800043/image.png"
+              />              
+              <ProjectRow
+                icon={<i className="bi bi-laptop"></i>}
+                title="QUANTUM ALGORITHMS SIMULATOR"
+                shortLine="EXPERIMENT TO SIMULATE QUANTUM ALGORITHMS IN PYTHON"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
               />
               <ProjectRow
@@ -254,6 +255,7 @@ export default function Home(){
                 title="VOTEX"
                 shortLine="A SIMPLE AND PRACTICAL APPLICATION OF SHA-256 ENCRYPTION AND DECRYPTION "
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
+                imgSrc="/votex (1).png"
               />
               <div className="project-row">
                 <div className="project-line border-t-1 border-black w-0 mx-auto"></div>
