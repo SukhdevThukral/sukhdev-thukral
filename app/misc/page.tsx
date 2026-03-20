@@ -51,7 +51,7 @@ export default function miscPage() {
             <CustomCursor/>
             <nav className="fixed top-0 left-0 w-full z-[100] py-8 pointer-events-auto">
                 <div className="max-w-[1216px] mx-auto px-12 flex justify-between items-center text-[#EA3424]">
-                    {["2020", "2022", "2024", "2026", "FUTURE"].map((year) => (
+                    {["2022", "2023", "2024", "2025", "2026"].map((year) => (
                         <button key={year} 
                         className="group relative inline-block text-[14px] uppercase tracking-[0.4em] transition-all">
                             {year}
@@ -184,7 +184,7 @@ export default function miscPage() {
                 <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#6554C0] overflow-hidden relative">
                     <div className="relative w-fit h-fit">
 
-                        <img src="https://cdn.hackclub.com/019d0d0f-c84c-7807-9f18-43ba8de3d51e/image.png"
+                        <img src="https://cdn.hackclub.com/019d0d81-62bb-7949-ba9f-518f0eaa2f7e/img-20230421-wa0011.jpg"
                             alt="teacher"
                             className="w-auto h-[50vh] object-contain"
                         />
