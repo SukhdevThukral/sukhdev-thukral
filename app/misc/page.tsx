@@ -93,21 +93,41 @@ export default function miscPage() {
                     </div>
                 </section>
 
-                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#5B6D84] overflow-hidden">
-                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[35vw] leading-none select-none pointer-events-none opacity-40 text-transparent ${abnormal.className}`}
-                    style={{WebkitTextStroke: '2px #F0B042'}}>
-                        2020
-                    </div>
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#5B6D84] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
 
-                    <div className="max-w-[1216px] mx-auto w-full px-12 grid grid-cols-12 gap-8 items-center relative z-10">
-
-                        <div className="col-span-8 flex justify-center">
-                            <img src="https://cdn.hackclub.com/019d0bfd-e779-77f8-a1d3-d298295e632d/image.png"
+                        <img src="https://cdn.hackclub.com/019d0bfd-e779-77f8-a1d3-d298295e632d/image.png"
                             alt="teacher"
-                            className="w-full h-auto max-h-[80vh] object-contain select-none pointer-events-none"/>
+                            className="w-auto h-[60vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #F0B042'}}
+                        >
+                            2020
                         </div>
-                        <div className="col-span-4 flex flex-col justify-end h-[50vh] text-white">
-                            <p className={`text-xl leading-relaxed font-light ${probaRegular.className}`}>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-10%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
                                 The 1950s were a transformative time. Women had 
                                 surged into the workforce during **World War II**, 
                                 making up 32 percent of the U.S. workforce by 1950. 
