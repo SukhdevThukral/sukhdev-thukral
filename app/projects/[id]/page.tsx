@@ -38,7 +38,7 @@ export default function ProjectDetails ({params}: {params: {id:string}}) {
             <section className="flex-1 bg-[#F6F4F2] text-black px-8 py-12 md:px-20 md:py-16 flex flex-col md:flex-row justify-between items-end">
                 <div className="info-content max-w-xl">
                     <p className="text-[14px] md:text-[18px] leading-snug font-medium text-gray-800 mb-10 max-w-xs">
-                        THIS IS is cool website u shld def check ts out cause I FUCKING COOKED IT GAY ASS NIGGER!!!
+                        lets not do tht
                     </p>
 
                     <h1 className={`text-6xl md:text-8xl font-bold tracking-tighter`}>
