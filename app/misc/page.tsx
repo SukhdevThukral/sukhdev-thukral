@@ -139,6 +139,7 @@ export default function miscPage() {
                         </div>
                     </div>
                 </section>
+
                 <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#FFAB00] overflow-hidden relative">
                     <div className="relative w-fit h-fit">
 
@@ -174,13 +175,8 @@ export default function miscPage() {
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                back in 2022, I was selected by the SteamVision Foundation to 
-                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
-                                the most remote areas of delhi. 
-                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
-                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
-                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
-                                helping them build technical and collaborative skills
+                                this was back when i participated in the FIRST Tech Challenge (FTC) as a fully sponsored student FOR THE FIRST TIME!!!!, selected based on merit and projects 
+                                , contributed to the team’s performance, and won the Young Achievers Award.
                             </p>
                         </div>
                     </div>
@@ -220,13 +216,9 @@ export default function miscPage() {
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                back in 2022, I was selected by the SteamVision Foundation to 
-                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
-                                the most remote areas of delhi. 
-                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
-                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
-                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
-                                helping them build technical and collaborative skills
+                                got the oppurtunity to present my robotics projects at a renowed womens' college (Lakshmibai College)
+                                to undergraduate students mainly and even THE DR. HARSH VARDHAN (Minister of Environment, Forest and Climate Change of India) and Harsh Chouhan
+                                (a politican)
                             </p>
                         </div>
                     </div>
@@ -254,7 +246,7 @@ export default function miscPage() {
                             ${abnormal.className}`}
                         style={{WebkitTextStroke: '3px #ffffff'}}
                         >
-                            2022
+                            2024
                         </div>
 
                         <div className="absolute 
@@ -266,13 +258,9 @@ export default function miscPage() {
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                back in 2022, I was selected by the SteamVision Foundation to 
-                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
-                                the most remote areas of delhi. 
-                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
-                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
-                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
-                                helping them build technical and collaborative skills
+                                Selected to participate at the Nexus American Center where i was peer mentoring 100+ students
+                             across mutiple schools and colleges in robotics and python foundational skills. HAD THE CHANCE TO INTERACT WITH AISHA BOWE
+                                AS WELL, GAINING MORE EXPOSURE TO GLOBAL POVs in STEM and innovation!!
                             </p>
                         </div>
                     </div>
@@ -300,7 +288,7 @@ export default function miscPage() {
                             ${abnormal.className}`}
                         style={{WebkitTextStroke: '3px #ffffff'}}
                         >
-                            2022
+                            2023
                         </div>
 
                         <div className="absolute 
@@ -312,18 +300,15 @@ export default function miscPage() {
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                back in 2022, I was selected by the SteamVision Foundation to 
-                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
-                                the most remote areas of delhi. 
-                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
-                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
-                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
-                                helping them build technical and collaborative skills
+                                participated in the ATL Marathon (a nationwide innovation challenge),
+                                three times securing a position in the top 450 teams twice but 
+                                achieved a ranking within the top 75 with my team earning recognition and awards obv, 
+                                including Samsung tablets presented by the school association (leadership).
                             </p>
                         </div>
                     </div>
                 </section>
-                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#0052CC] overflow-hidden relative">
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#008DA6] overflow-hidden relative">
                     <div className="relative w-fit h-fit">
 
                         <img src="https://cdn.hackclub.com/019d0d46-bd93-7569-9a54-05f2bf98a225/image.png"
@@ -346,7 +331,7 @@ export default function miscPage() {
                             ${abnormal.className}`}
                         style={{WebkitTextStroke: '3px #ffffff'}}
                         >
-                            2022
+                            2025
                         </div>
 
                         <div className="absolute 
@@ -358,18 +343,14 @@ export default function miscPage() {
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                back in 2022, I was selected by the SteamVision Foundation to 
-                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
-                                the most remote areas of delhi. 
-                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
-                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
-                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
-                                helping them build technical and collaborative skills
+                                my first hack club event(daydream delhi) that i initially decided to participate in but
+                                got selected as a volunteer. i was helping out with carrying food boxes to helping out
+                                teens ship their first games.  
                             </p>
                         </div>
                     </div>
                 </section>                
-                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#091E42] overflow-hidden relative">
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#0049B0] overflow-hidden relative">
                     <div className="relative w-fit h-fit">
 
                         <img src="https://cdn.hackclub.com/019d0d40-2361-708c-aaab-faed28a9abfa/image.png"
@@ -392,7 +373,7 @@ export default function miscPage() {
                             ${abnormal.className}`}
                         style={{WebkitTextStroke: '3px #ffffff'}}
                         >
-                            2022
+                            2026
                         </div>
 
                         <div className="absolute 
@@ -404,13 +385,12 @@ export default function miscPage() {
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                back in 2022, I was selected by the SteamVision Foundation to 
-                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
-                                the most remote areas of delhi. 
-                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
-                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
-                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
-                                helping them build technical and collaborative skills
+                                (these guys made a game and i was apparently an antagonist of their game AN EVIL SCIENTIST AT THAT)
+                                
+                                GOT SELECTED AS AN ORGANISER THIS TIME!!! and worked with my team to 
+                                secure sponsors(IRL COLD APPROACHING) and working out spreadsheets to 
+                                make sure smooth flow of things - eventually everything worked out 
+                                got pretty good feedback from the participants, a good nps score :D
                             </p>
                         </div>
                     </div>
