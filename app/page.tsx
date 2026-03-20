@@ -179,11 +179,11 @@ export default function Home(){
           <div className={`flex justify-between items-center absolute top-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
             <div className="flex gap-2">
               <div className="overflow-hidden">
-                <h1 className="nav-item inline-block italic">HOME,</h1>
+                <h1 className="nav-item inline-block italic">ProjeX,</h1>
               </div>
               <div className="overflow-hidden">
                 <Link href="/projects">
-                  <h1 className="nav-item inline-block"> ABOUT</h1>
+                  <h1 className="nav-item inline-block"> XPerience</h1>
                 </Link>
               </div>
             </div>
@@ -268,17 +268,17 @@ export default function Home(){
                 </div>
                 <div className="flex flex-col text-[1.2rem]">          
                   <span>OR FOLLOW ME ON </span> 
-                  <span> <i className="bi bi-instagram"></i>   INSTAGRAM </span>
+                  <span> <i className="bi bi-instagram"></i>         INSTAGRAM </span>
                 </div>
               </div>
             </div>  
           <div className={`flex justify-between items-center absolute bottom-2 left-3 right-3 text-lg font-bold ${nimbusSans.className}`}>
             <div className="flex gap-2">
               <div className="overflow-hidden">
-                <h1 className="footer-item inline-block italic">HOME,</h1>
+                <h1 className="footer-item inline-block italic">ProjeX,</h1>
               </div>
               <div className="overflow-hidden">
-                <h1 className="footer-item inline-block">ABOUT</h1>
+                <h1 className="footer-item inline-block">XPerience</h1>
               </div>
             </div>
             <div className="overflow-hidden">

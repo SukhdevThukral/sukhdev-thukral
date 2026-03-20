@@ -204,7 +204,7 @@ export default function miscPage() {
                             ${abnormal.className}`}
                         style={{WebkitTextStroke: '3px #ffffff'}}
                         >
-                            2022
+                            2023
                         </div>
 
                         <div className="absolute 
