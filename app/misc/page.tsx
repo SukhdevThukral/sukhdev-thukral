@@ -231,6 +231,191 @@ export default function miscPage() {
                         </div>
                     </div>
                 </section>
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#008DA6] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
+
+                        <img src="https://cdn.hackclub.com/019d0d2e-fccf-7bf9-a5c9-811f3d7bdb7c/image.png"
+                            alt="teacher"
+                            className="w-auto h-[50vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #ffffff'}}
+                        >
+                            2022
+                        </div>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-40%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#172B4D] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
+
+                        <img src="https://cdn.hackclub.com/019d0d33-b534-7580-b628-59064d387757/image.png"
+                            alt="teacher"
+                            className="w-auto h-[50vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #ffffff'}}
+                        >
+                            2022
+                        </div>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-40%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#0052CC] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
+
+                        <img src="https://cdn.hackclub.com/019d0d46-bd93-7569-9a54-05f2bf98a225/image.png"
+                            alt="teacher"
+                            className="w-auto h-[50vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #ffffff'}}
+                        >
+                            2022
+                        </div>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-40%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
+                            </p>
+                        </div>
+                    </div>
+                </section>                
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#091E42] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
+
+                        <img src="https://cdn.hackclub.com/019d0d40-2361-708c-aaab-faed28a9abfa/image.png"
+                            alt="teacher"
+                            className="w-auto h-[50vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #ffffff'}}
+                        >
+                            2022
+                        </div>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-40%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </main>
     )
