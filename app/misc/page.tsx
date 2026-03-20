@@ -260,7 +260,7 @@ export default function miscPage() {
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
                                 Selected to participate at the Nexus American Center where i was peer mentoring 100+ students
                              across mutiple schools and colleges in robotics and python foundational skills. HAD THE CHANCE TO INTERACT WITH AISHA BOWE
-                                AS WELL, GAINING MORE EXPOSURE TO GLOBAL POVs in STEM and innovation!!
+                                AS WELL, GAINING MORE EXPOSURE TO GLOBAL POVs in STEM and innovation!! (with STEAM Varsity)
                             </p>
                         </div>
                     </div>
