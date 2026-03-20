@@ -34,7 +34,7 @@ export default function miscPage() {
     useGSAP(() => {
         const panels = gsap.utils.toArray(".panel");
         gsap.to(panels, {
-            xPercent: -100 * (panels.length - 1),
+            x: () => -(scrollTrack.current!.scrollWidth - window.innerWidth),
             ease: "none",
             scrollTrigger: {
                 trigger: container.current,
@@ -47,21 +47,21 @@ export default function miscPage() {
     }, {scope: container});
 
     return(
-        <main ref={container} className="bg-[#F6F4F2] font-sans selection:bg-[#EA3424] selection:text-white">
+        <main ref={container} className="bg-[#F6F4F2] relative h-screen overflow-hidden font-sans selection:bg-[#EA3424] selection:text-white">
             <CustomCursor/>
             <nav className="fixed top-0 left-0 w-full z-[100] py-8 pointer-events-auto">
-                <div className="max-w-[1216px] mx-auto px-12 flex justify-between items-center pointer-events-auto text-[#EA3424]">
+                <div className="max-w-[1216px] mx-auto px-12 flex justify-between items-center text-[#EA3424]">
                     {["2020", "2022", "2024", "2026", "FUTURE"].map((year) => (
                         <button key={year} 
                         className="group relative inline-block text-[14px] uppercase tracking-[0.4em] transition-all">
                             {year}
-                            <span className="absolute left-0 bottom-[-8px] w-0 h-[1.5px] bg-[#EA3424] transition-all duration-300 ease-in-out group-hover:w-full"></span>
+                            <span className="absolute left-0 bottom-[-8px] w-0 h-[1.5px] bg-[#EA3424] transition-all duration-300 group-hover:w-full"></span>
                         </button>
                     ))}
                 </div>
             </nav>
 
-            <div ref={scrollTrack} className="flex w-fit h-screen">
+            <div ref={scrollTrack} className="flex flex-nowrap w-fit h-screen ">
                 <section className="panel w-screen h-screen flex-shrink-0 flex flex-col pt-40 relative">
 
                     <div className="max-w-[1216px] mx-auto w-full px-12 flex flex-col">
@@ -118,4 +118,5 @@ export default function miscPage() {
                 </section>
             </div>
         </main>
-    )}
+    )
+}

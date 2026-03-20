@@ -19,7 +19,6 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   cursor: none !important;
   height: auto;
-  overflow: hidden;
   overflow-x: hidden;
   scroll-behavior: auto !important;
 }
