@@ -4,8 +4,8 @@ import React, {useEffect, useRef} from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
+import CustomCursor from "../components/customCursor";
 import localFont from "next/font/local";
-import { Container } from "lucide-react";
 
 if (typeof window !== "undefined"){
     gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -47,12 +47,14 @@ export default function miscPage() {
 
     return(
         <main ref={container} className="bg-[#F6F4F2] overflow-hidden font-sans selection:bg-[#EA3424] selection:text-white">
-
+        <CustomCursor/>
             <nav className="fixed top-0 left-0 w-full z-50 py-8 pointer-events-none">
                 <div className="max-w-6xl mx-auto px-12 flex justify-between items-center pointer-events-auto text-[#EA3424]">
                     {["2020", "2022", "2024", "2026", "FUTURE"].map((year) => (
-                        <button key={year} className="text-[14px] uppercase tracking-[0.4em] hover:opacity-50 transition-all">
+                        <button key={year} 
+                        className="group relative inline-block text-[14px] uppercase tracking-[0.4em] transition-all">
                             {year}
+                            <span className="absolute left-0 bottom-[-8px] w-0 h-[1.5px] bg-[#EA3424] transition-all duration-300 ease-in-out group-hover:w-full"></span>
                         </button>
                     ))}
                 </div>
