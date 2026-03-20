@@ -98,7 +98,7 @@ export default function miscPage() {
 
                         <img src="https://cdn.hackclub.com/019d0bfd-e779-77f8-a1d3-d298295e632d/image.png"
                             alt="teacher"
-                            className="w-auto h-[60vh] object-contain"
+                            className="w-auto h-[50vh] object-contain"
                         />
 
                         <div 
@@ -116,22 +116,117 @@ export default function miscPage() {
                             ${abnormal.className}`}
                         style={{WebkitTextStroke: '3px #F0B042'}}
                         >
-                            2020
+                            2022
                         </div>
 
                         <div className="absolute 
                         right-[-10%]
-                        bottom-[-10%] 
+                        bottom-[-40%] 
                         w-full 
                         max-w-md 
                         text-white 
                         z-20">
 
                             <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
-                                The 1950s were a transformative time. Women had 
-                                surged into the workforce during **World War II**, 
-                                making up 32 percent of the U.S. workforce by 1950. 
-                                More African Americans took on office jobs...
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#FFAB00] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
+
+                        <img src="https://cdn.hackclub.com/019d0d0e-7a31-798d-a8d4-d2c6857318d3/image.png"
+                            alt="teacher"
+                            className="w-auto h-[50vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #F0B042'}}
+                        >
+                            2022
+                        </div>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-40%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#6554C0] overflow-hidden relative">
+                    <div className="relative w-fit h-fit">
+
+                        <img src="https://cdn.hackclub.com/019d0d0f-c84c-7807-9f18-43ba8de3d51e/image.png"
+                            alt="teacher"
+                            className="w-auto h-[50vh] object-contain"
+                        />
+
+                        <div 
+                        className={`
+                            absolute 
+                            left-[-10%] 
+                            top-[-10%] 
+                            text-[10vw] 
+                            leading-none 
+                            select-none
+                            pointer-events-none
+                            opacity-80 
+                            text-transparent 
+                            z-10
+                            ${abnormal.className}`}
+                        style={{WebkitTextStroke: '3px #ffffff'}}
+                        >
+                            2022
+                        </div>
+
+                        <div className="absolute 
+                        right-[-10%]
+                        bottom-[-40%] 
+                        w-full 
+                        max-w-md 
+                        text-white 
+                        z-20">
+
+                            <p className={`text-lg md:text-xl leading-snug font-medium drop-shadow-lg ${probaRegular.className}`}>
+                                back in 2022, I was selected by the SteamVision Foundation to 
+                                serve as a peer mentor and volunteer, working with underprivileged communities in some of 
+                                the most remote areas of delhi. 
+                                and during this experience I conducted sessions on MIT App Inventor, introduced students to 
+                                foundational Python/C++ programming, and promoted hands-on learning in robotics. I also 
+                                mentored teams preparing for the FIRST Tech Challenge (FTC), 
+                                helping them build technical and collaborative skills
                             </p>
                         </div>
                     </div>
