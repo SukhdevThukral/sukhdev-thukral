@@ -40,16 +40,17 @@ export default function miscPage() {
                 trigger: container.current,
                 pin: true,
                 scrub: 1,
-                end: () => "+=" + (container.current?.offsetWidth || 0) * 3,
+                end: () => `+=${scrollTrack.current!.scrollWidth - window.innerWidth}`,
+                invalidateOnRefresh: true,
             },
         })
     }, {scope: container});
 
     return(
-        <main ref={container} className="bg-[#F6F4F2] overflow-hidden font-sans selection:bg-[#EA3424] selection:text-white">
-        <CustomCursor/>
-            <nav className="fixed top-0 left-0 w-full z-50 py-8 pointer-events-none">
-                <div className="max-w-6xl mx-auto px-12 flex justify-between items-center pointer-events-auto text-[#EA3424]">
+        <main ref={container} className="bg-[#F6F4F2] font-sans selection:bg-[#EA3424] selection:text-white">
+            <CustomCursor/>
+            <nav className="fixed top-0 left-0 w-full z-[100] py-8 pointer-events-auto">
+                <div className="max-w-[1216px] mx-auto px-12 flex justify-between items-center pointer-events-auto text-[#EA3424]">
                     {["2020", "2022", "2024", "2026", "FUTURE"].map((year) => (
                         <button key={year} 
                         className="group relative inline-block text-[14px] uppercase tracking-[0.4em] transition-all">
@@ -60,8 +61,8 @@ export default function miscPage() {
                 </div>
             </nav>
 
-            <div ref={scrollTrack} className="flex w-[500vw] h-screen">
-                <section className="panel w-screen h-screen flex flex-col pt-40 relative">
+            <div ref={scrollTrack} className="flex w-fit h-screen">
+                <section className="panel w-screen h-screen flex-shrink-0 flex flex-col pt-40 relative">
 
                     <div className="max-w-[1216px] mx-auto w-full px-12 flex flex-col">
 
@@ -92,6 +93,29 @@ export default function miscPage() {
                     </div>
                 </section>
 
+                <section className="panel w-screen h-screen flex-shrink-0 flex items-center justify-center bg-[#5B6D84] overflow-hidden">
+                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[35vw] leading-none select-none pointer-events-none opacity-40 text-transparent ${abnormal.className}`}
+                    style={{WebkitTextStroke: '2px #F0B042'}}>
+                        2020
+                    </div>
+
+                    <div className="max-w-[1216px] mx-auto w-full px-12 grid grid-cols-12 gap-8 items-center relative z-10">
+
+                        <div className="col-span-8 flex justify-center">
+                            <img src="https://cdn.hackclub.com/019d0bfd-e779-77f8-a1d3-d298295e632d/image.png"
+                            alt="teacher"
+                            className="w-full h-auto max-h-[80vh] object-contain select-none pointer-events-none"/>
+                        </div>
+                        <div className="col-span-4 flex flex-col justify-end h-[50vh] text-white">
+                            <p className={`text-xl leading-relaxed font-light ${probaRegular.className}`}>
+                                The 1950s were a transformative time. Women had 
+                                surged into the workforce during **World War II**, 
+                                making up 32 percent of the U.S. workforce by 1950. 
+                                More African Americans took on office jobs...
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
     )}
