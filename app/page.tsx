@@ -214,7 +214,7 @@ export default function Home(){
                 <div className={`text-center w-fit max-w-[100ch] text-[0.9rem] sm:text-[1.13rem] md:text-[1.125rem] lg:text-[1.1rem] text-[#111111] font-bold ${nimbusSans.className}`}>
                   <div className="overflow-hidden">
                     <p ref={descRef} className="desc-reveal inline-block">
-                    I AM A HIGH SCHOOL SENIOR LIVING IN INDIA AND A (PROCLAIMED) PRODUCT ENGINEER WITH A GENERALIST 
+                    I AM A PRODUCT ENGINEER WITH A GENERALIST 
                     MINDSET I WORK IN PARALLEL ACROSS MULTIPLE TECH DOMAINS RAPIDLY 
                     ADAPTING TO NEW TOOLS AND TECHNOLOGY I LOVE BUILDING SOFTWARE, HARDWARE AND NETWORKS AND 
                     TURNING IDEAS INTO REAL USEFUL THINGS 
