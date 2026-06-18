@@ -5,7 +5,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import CustomCursor from "../components/customCursor";
-import "bootstrap-icons/font/bootstrap-icons.css"
 import SmoothScroll from '../components/ScrollSmoother';
 import localFont from "next/font/local";
 import { useGSAP} from "@gsap/react";
@@ -30,55 +29,62 @@ const nimbusSans = localFont({
 const PROJECTS = [
     {
         id: "[01]",
-        title: "Commit Craft",
+        title: "Hover Tube",
         category: "tool",
-        year: "©2025",
-        image: "/commitcraft (1).png"
+        year: "©2026",
+        image: "https://cdn.hackclub.com/019ecb5f-e04a-7252-956a-1fd1b23f3c29/image.png"
     },
     {
         id: "[02]",
+        title: "Commit Craft",
+        category: "tool",
+        year: "©2026",
+        image: "/commitcraft (1).png"
+    },
+    {
+        id: "[03]",
         title: "Sonic Mesh",
         category: "tool",
         year: "©2025",
         image: "/sonicmesh (1).png"
     },
     {
-        id: "[03]",
+        id: "[04]",
         title: "Votex",
         category: "tool",
         year: "©2025",
         image: "/votex (1).png"
     },
     {
-        id: "[04]",
+        id: "[05]",
         title: "sukhdev-thukral",
         category: "web dev",
         year: "©2026",
         image: "/sukhdev-thukral(1).png"
     },
     {
-        id: "[05]",
+        id: "[06]",
         title: "Thread Weaver",
         category: "cli tool",
         year: "©2025",
         image: "/ThreadWeaver (2).png"
     },
     {
-        id: "[06]",
+        id: "[07]",
         title: "CHEAT CODE",
         category: "cli tool",
         year: "©2024",
         image: "/cheatcode(2).png"
     },
     {
-        id: "[07]",
+        id: "[08]",
         title: "Crypto Flair",
         category: "my own nft :D",
         year: "©2022",
         image: "/nft(1).png"
     },
     {
-        id: "[08]",
+        id: "[09]",
         title: "Spikeyy",
         category: "valorant discord bot",
         year: "©2020",
@@ -117,7 +123,7 @@ export default function projectPage() {
             });
             tlCard.from(card.querySelector(".project-image-wrapper"), {
                 scale: 1.1,
-                clipPath: "inset(100$ 0% 0% 0%)",
+                clipPath: "inset(100% 0% 0% 0%)",
                 duration: 1.4,
                 ease: "power4.out"
             })

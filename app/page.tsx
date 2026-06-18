@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import localFont from "next/font/local"
 import ProjectRow from "./components/ProjectRow";
-import "bootstrap-icons/font/bootstrap-icons.css"
 import SmoothScroll from './components/ScrollSmoother';
 import CustomCursor from "./components/customCursor";
 import { useRef } from "react";
