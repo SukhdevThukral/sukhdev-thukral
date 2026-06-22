@@ -27,8 +27,8 @@ const PROJECTS: Record<string, {
     github?: string; demo?: string
 }> = {
     "01" : {
-        title: "Commit Craft",
-        category: "Tool",
+        title: "Hover Tube",
+        category: "Extension",
         year: "©2026",
         description:  "AUTO-GENERATES CLEAN, CONVENTIONAL COMMIT MESSAGES FROM YOUR STAGED GIT DIFFS - SAVING TIME AND KEEPING YOUR GIT HISTORY READABLE WITHOUT ANY EXTRA EFFORT.",
         tags: ["GIT", "AI", "CLI", "OPEN SOURCE"],
@@ -37,8 +37,8 @@ const PROJECTS: Record<string, {
         github: "https://github.com/SukhdevThukral/commitcraft"
     },
     "02" : {
-        title: "Hover Tube",
-        category: "Extension",
+        title: "Commit Craft",
+        category: "Tool",
         year: "©2026",
         description:  "AUTO-GENERATES CLEAN, CONVENTIONAL COMMIT MESSAGES FROM YOUR STAGED GIT DIFFS - SAVING TIME AND KEEPING YOUR GIT HISTORY READABLE WITHOUT ANY EXTRA EFFORT.",
         tags: ["GIT", "AI", "CLI", "OPEN SOURCE"],
