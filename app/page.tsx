@@ -224,40 +224,60 @@ export default function Home(){
               {/* </div> */}
             </div>
             <div className={`px-6 md:px-12 lg:px-20 ${nimbusSans.className}`}>  
+
+              <ProjectRow
+                icon={<i className="bi bi-git"></i>}
+                title="HoverTube"
+                shortLine="SUMMARIZES YOUTUBE VIDEOS JUST BY HOVERING OVER IT"
+                actionIcon={<i className="bi bi-arrow-up-right"></i>}
+                imgSrc="https://cdn.hackclub.com/019eed65-418f-719f-8436-d3d3eb0ac97d/yo.png"
+                link="https://github.com/SukhdevThukral/Hover-Tube"
+              />
+
               <ProjectRow
                 icon={<i className="bi bi-git"></i>}
                 title="COMMITCRAFT"
                 shortLine="CONVENTIONAL AI COMMIT GENERATOR"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
                 imgSrc="https://cdn.hackclub.com/019ceffe-7e34-7cad-aa45-8a94fbc79299/image.png"
+                link="https://github.com/SukhdevThukral/commitcraft"
               />
+
               <ProjectRow
                 icon={<i className="bi bi-volume-up"></i>}
                 title="SONICMESH"
                 shortLine="ULTRASONIC COMMUNICATION ENABLING DATA TRANSFER OVER AUDIO."
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
                 imgSrc="https://cdn.hackclub.com/019cf00b-f42c-7704-a861-74acd322e5c7/image.png"
+                link="https://github.com/SukhdevThukral/SonicMesh"
               />
+
               <ProjectRow
                 icon={<i className="bi bi-window-stack"></i>}
                 title="THIS WEBSITE"
                 shortLine="TOOK DESIGN INSPO FROM DRIBBBLE <33"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
                 imgSrc="https://cdn.hackclub.com/019d0413-cb2b-720d-8673-7b4b23800043/image.png"
-              />              
+                link="https://github.com/SukhdevThukral/sukhdev-thukral"
+              />     
+
               <ProjectRow
                 icon={<i className="bi bi-laptop"></i>}
                 title="QUANTUM ALGORITHMS SIMULATOR"
                 shortLine="EXPERIMENT TO SIMULATE QUANTUM ALGORITHMS IN PYTHON"
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
+                link="https://github.com/SukhdevThukral/quantum-algorithms-simulation"
               />
+
               <ProjectRow
                 icon={<i className="bi bi-fingerprint"></i>}
                 title="VOTEX"
                 shortLine="A SIMPLE AND PRACTICAL APPLICATION OF SHA-256 ENCRYPTION AND DECRYPTION "
                 actionIcon={<i className="bi bi-arrow-up-right"></i>}
                 imgSrc="/votex (1).png"
+                link="https://github.com/SukhdevThukral/VoteX"
               />
+
               <div className="project-row">
                 <div className="project-line border-t-1 border-black w-0 mx-auto"></div>
               </div>
@@ -265,11 +285,10 @@ export default function Home(){
             <div className="py-[3rem] md:py-[4rem] lg:py-[6rem]">
               <div className={`text-center font-bold ${nimbusSans.className}`}>
                 <div className="text-[1.97rem] sm:text-[1.95rem] md:text-[1.85rem] lg:text-[1.8rem]">
-                  <h1 className="underline underline-offset-8">HIT ME UP</h1>
+                  <h1 className="underline underline-offset-8">FOLLOW ME</h1>
                 </div>
                 <div className="flex flex-col text-[1.2rem]">          
-                  <span>OR FOLLOW ME ON </span> 
-                  <span> <i className="bi bi-instagram"></i>         INSTAGRAM </span>
+                  <span><i className="bi bi-instagram"></i>  sukhdevthukral </span>
                 </div>
               </div>
             </div>  

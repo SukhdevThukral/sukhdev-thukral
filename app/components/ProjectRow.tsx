@@ -7,13 +7,19 @@ type ProjectRowProps = {
     shortLine: string;
     actionIcon?: ReactNode;
     imgSrc?:string;
+    link?: string;
 }
 
-export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc}: ProjectRowProps) {
+export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc,link}: ProjectRowProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="project-row cursor-pointer group w-full relative pointer-events-none"
+  <a
+  
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="project-row cursor-pointer group w-full relative pointer-events-none"
     onMouseEnter={()=> setIsHovered(true)}
     onMouseLeave={()=> setIsHovered(false)}>
 
@@ -36,6 +42,6 @@ export default function ProjectRow({ icon,title,shortLine,actionIcon,imgSrc}: Pr
         </div>
       </div>
       <div className="project-line border-t-1 py-4 border-black w-0"></div>
-    </div>
+    </a>
   )
 }

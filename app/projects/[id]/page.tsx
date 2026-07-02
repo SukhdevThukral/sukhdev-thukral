@@ -34,7 +34,7 @@ const PROJECTS: Record<string, {
         tags: ["GIT", "AI", "CLI", "OPEN SOURCE"],
         stack: "NODE.JS · TYPESCRIPT",
         status: "OPEN SOURCE",
-        github: "https://github.com/SukhdevThukral/commitcraft"
+        github: "https://github.com/SukhdevThukral/Hover-Tube"
     },
     "02" : {
         title: "Commit Craft",
@@ -218,7 +218,6 @@ export default function ProjectDetails () {
                     <div className="flex justify-between items-center absolute bottom-2 left-3 right-3">
                         <h1 className="text-lg font-bold">© SUKHDEV THUKRAL</h1>
                     </div>
-                    
                 </div>
             </SmoothScroll>
         </div>
