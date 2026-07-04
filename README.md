@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Hi, I'm Sukhdev Thukral 👋
 
-First, run the development server:
+![GitHub stars](https://img.shields.io/github/stars/SukhdevThukral/CommitCraft?style=social)
+![Made with ❤️](https://img.shields.io/badge/made%20with-%E2%9D%A4-red)
+![Top Language](https://img.shields.io/github/languages/top/SukhdevThukral/sukhdev-thukral)
+[![CommitCraft](https://img.shields.io/badge/Powered_by-CommitCraft-0078d7?style=for-the-badge&logo=github)](https://github.com/SukhdevThukral/CommitCraft)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building AI, Robotics, and Developer Tools.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+This is my portfolio website showcasing my projects, research, experience, and journey as a dev, and aspiring engineer.
 
-To learn more about Next.js, take a look at the following resources:
+It highlights:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-  Featured projects
+-  Robotics work
+-  Research Projects
+-  Experience & leadership
+-  Achievements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The goal was to create a clean, interactive 
+and creative experience that reflects both my technical skills and design philosophy.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** GSAP
+- **Deployment:** Vercel
+- **Fonts:** Geist
+---
+
+## Features
+
+-  Fast performance
+-  Modern UI
+-  Smooth animations
+---
+
+## Deployment
+
+The website is deployed on **Vercel**, automatically redeploys whenever changes are pushed to the `main` branch.
+
+---
+
+## Inspiration
+
+Rather than functioning as a simple online portfolio, this is designed to document what I'm building, experimenting with, and learning over time.
+
+---
+
+## License
+
+This project is open source under the MIT License.
+
+---
+
+## Contact
+
+Website: https://sukhdevthukral.xyz
+
+GitHub: https://github.com/SukhdevThukral
+
+LinkedIn: https://linkedin.com/in/sukhdevthukral
